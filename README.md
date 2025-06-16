@@ -6,10 +6,10 @@ _Empowering Seamless Connections for Real-Time Communication_
 
 • [Overview](#overview) <br>
 • [Getting Started](#getting-started) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;•[Prerequisites](#prerequisites)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;•[Installation](#installation)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;•[Usage](#usage)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;•[Testing](#testing)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;• [Prerequisites](#prerequisites)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;• [Installation](#installation)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;• [Usage](#usage)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;• [Testing](#testing)  <br>
 
 ## Overview
 
