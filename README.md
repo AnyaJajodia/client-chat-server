@@ -46,7 +46,7 @@ git clone https://github.com/yourusername/client-chat-server.git
 cd client-chat-server
 make
 ```
-<br>
+
 This will generate: <br>
 
 - `chatclient` <br>
@@ -55,6 +55,7 @@ This will generate: <br>
 ---
 
 ### 🖥️ Usage
+<br>
 
 **🟢 Start the Server**
 
