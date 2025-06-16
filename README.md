@@ -1,73 +1,97 @@
-# CLIENT-CHAT-SERVER
+# Client-Chat-Server
 
-_Empowering Seamless Connections for Real-Time Communication_
+**A lightweight, multi-user terminal-based chat system built in C**
 
-## Table of Contents
+## 📌 Overview
 
-• [Overview](#overview) <br>
-• [Getting Started](#getting-started) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;• [Prerequisites](#prerequisites)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;• [Installation](#installation)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;• [Usage](#usage)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;• [Testing](#testing)  <br>
+**Client-Chat-Server** is a simple yet robust client-server chat application that enables real-time messaging between multiple users via terminal. It uses sockets and `select()` to manage multiple client connections without threading, making it efficient and easy to understand.
 
-## Overview
+### ✨ Features
 
-client-chat-server is a versatile framework for developing real-time, multi-user chat applications. It combines core server and client components with utility functions to ensure reliable data exchange and input validation.
+- 🌐 Supports multiple simultaneous client connections (default: 3)
+- 💬 Real-time text-based chat with user-friendly prompts
+- 🔌 Reliable communication with custom message length encoding
+- 🧹 Graceful connection handling and clean shutdowns
+- ⚙️ Easy compilation via a single Makefile
 
-**Why client-chat-server?**
+---
 
-This project streamlines the development of networked chat systems by providing:
+## 🛠️ Project Structure
 
-• 🛠️ Utility Functions: Standardized methods for safe message transmission and robust input parsing, reducing common communication errors.
-• 🌐 Multi-Client Server: Handles multiple simultaneous connections, manages user sessions, and broadcasts messages efficiently.
-• 💬 Real-Time Messaging: Facilitates seamless, bidirectional communication between clients and the server.
-• 🚀 Automated Build: Simplifies compilation and deployment with a well-defined Makefile, ensuring consistency across environments.
-• 🔒 Connection Stability: Implements graceful shutdowns and resource management for reliable operation.
+| File             | Description                                               |
+|------------------|-----------------------------------------------------------|
+| `chatserver.c`   | Server-side logic: manages clients, broadcasts messages   |
+| `chatclient.c`   | Client-side logic: connects to server, sends/receives messages |
+| `util.h`         | Shared utility functions for communication and parsing    |
+| `Makefile`       | Simplifies compilation and execution                      |
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Getting Started
 
-This project requires the following dependencies:
-• **Programming Language**: C
-• **Package Manager**: Make
+### 🔧 Prerequisites
 
-### Installation
+- GCC compiler (`gcc`)
+- `make` utility
+- Unix-based terminal (Linux, macOS)
 
-Build client-chat-server from the source and install dependencies:
+---
 
-1. **Clone the repository:**
+### 🧱 Building the Project
+
+Clone the repository and build the binaries:
+
+```bash
+git clone https://github.com/yourusername/client-chat-server.git
+cd client-chat-server
+make
 ```
-❯ git clone https://github.com/AnyaJajodia/client-chat-server
+<br>
+This will generate: <br>
+
+- `chatclient` <br>
+- `chatserver` <br>
+
+---
+
+### 🖥️ Usage
+
+**🟢 Start the Server**
+
+```bash
+./chatserver <port>
 ```
 
-2. **Navigate to the project directory:**
-```
-❯ cd client-chat-server
-```
+Example:
 
-3. **Install the dependencies:**
-
-**Using make:**
+```bash
+./chatserver 5000
 ```
-❯ make deps
-```
+<br>
 
-### Usage
+**🔵 Start the Client(s)**
 
-Run the project with:
+In another terminal window (or multiple terminals for multiple users):
 
-Using make:
-```
-make run
+```bash
+./chatclient <server_ip> <port>
 ```
 
-### Testing
+Example:
 
-Client-chat-server uses the **{test_framework}** test framework. Run the test suite with:
+```bash
+./chatclient 127.0.0.1 5000
+```
 
-Using make:
-```
-make test
-```
+Each client will be prompted to enter a username. Type your message and press Enter to chat. Type bye to exit.
+
+---
+
+### 📌 Notes
+
+- Server supports up to 3 concurrent clients (MAX_CONNECTIONS in chatserver.c). You can increase this value if needed. <br>
+- Messages are prefixed with usernames for clarity. <br>
+- Uses select() to multiplex I/O for scalability without threads. <br>
+
+
+
