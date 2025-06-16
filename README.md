@@ -4,12 +4,12 @@ _Empowering Seamless Connections for Real-Time Communication_
 
 ## Table of Contents
 
-• [Overview](#overview)
-• [Getting Started](#getting-started)
-Prerequisites
-Installation
-Usage
-Testing
+• [Overview](#overview) <br>
+• [Getting Started](#getting-started) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;•[Prerequisites](#prerequisites)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;•[Installation](#installation)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;•[Usage](#usage)  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;•[Testing](#testing)  <br>
 
 ## Overview
 
@@ -63,7 +63,7 @@ Using make:
 make run
 ```
 
-Testing
+### Testing
 
 Client-chat-server uses the **{test_framework}** test framework. Run the test suite with:
 
